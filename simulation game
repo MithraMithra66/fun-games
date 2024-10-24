@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Games</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet"> <!-- Decorative font -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffccff; /* Light pink background */
+            text-align: center;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(to right, #ff69b4, #ff1493); /* Darker pink header */
+            padding: 20px;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            animation: float 3s ease-in-out infinite; /* Floating effect */
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive; /* Different font for the header */
+            font-size: 48px; /* Increase font size */
+            color: #ffeb3b; /* Bright color for header text */
+            margin: 0; /* Remove default margin */
+        }
+
+        .mini-logo {
+            font-size: 48px; /* Adjust the font size */
+            font-family: 'Fredericka the Great', cursive; /* Use the new font */
+            color: #4caf50;
+            margin: 20px 0;
+            animation: wave 1.5s infinite; /* Wave effect */
+        }
+
+        main {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            padding-bottom: 80px;
+            position: relative; /* For positioning elements */
+        }
+
+        h2 {
+            font-size: 24px; /* Font size for subheading */
+            margin: 20px 0; /* Spacing around subheading */
+        }
+
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .game {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            cursor: pointer;
+            background: white;
+            border-radius: 10px; /* More rounded corners */
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow effect */
+            transition: background 0.3s, transform 0.3s; /* Added transform transition */
+            position: relative; /* Relative positioning for animation */
+            overflow: hidden; /* Hide overflow for animation */
+            animation: float 3s ease-in-out infinite; /* Floating effect for game buttons */
+        }
+
+        .game:hover {
+            background: #e0f7fa; /* Change background on hover */
+            transform: translateY(-5px); /* Lift effect on hover */
+            animation: bounce 0.3s ease; /* Bounce effect */
+        }
+
+        .game img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+            transition: transform 0.3s; /* Smooth scaling */
+        }
+
+        .game:hover img {
+            transform: scale(1.1); /* Scale the image on hover */
+        }
+
+        footer {
+            background-color: #444;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            position: relative;
+        }
+
+        footer p {
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0%, 100% {
+                transform: translatey(0);
+            }
+            50% {
+                transform: translatey(-10px); /* Float height */
+            }
+        }
+
+        /* Bounce Animation */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px); /* Bounce height */
+            }
+        }
+
+        /* Wave Animation */
+        @keyframes wave {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px); /* Wave height */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WELCOME TO FUN GAMES</h1>
+    </header>
+    <main>
+        <div class="mini-logo">MINI</div> <!-- MINI Logo -->
+        <h2>Select a Game to Play</h2>
+        <div class="game-container">
+            <div class="game" onclick="window.location.href='memory-card-game.html'">
+                <img src="C:\Users\admin\Desktop\MySimpleWebsite\images\game-game1.png.webp" alt="Memory Card Game">
+                <p>Memory Card Game</p>
+            </div>
+            <div class="game" onclick="window.location.href='puzzle-game.html'">
+                <img src="C:\Users\admin\Desktop\MySimpleWebsite\images\game-game2.png.jpg" alt="Puzzle Game">
+                <p>Puzzle Game</p>
+            </div>
+            <div class="game" onclick="window.location.href='memory-game.html'">
+                <img src="C:\Users\admin\Desktop\MySimpleWebsite\images\game-game3.png.avif" alt="Memory Game">
+                <p>Memory Game</p>
+            </div>
+            <div class="game" onclick="window.location.href='color-matching.html'">
+                <img src="C:\Users\admin\Desktop\MySimpleWebsite\images\game-game4.png.webp" alt="Color Matching">
+                <p>Color Matching</p>
+            </div>
+            <div class="game" onclick="window.location.href='rhyming-pairs-game.html'">
+                <img src="C:\Users\admin\Desktop\MySimpleWebsite\images\game-game5.png.webp" alt="Rhyming Word Game">
+                <p>Rhyming Pairs</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Simple and Easy Games</p>
+    </footer>
+</body>
+</html>
